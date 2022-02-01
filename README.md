@@ -42,6 +42,8 @@ Monitor the application's output by using the *picocom* tool.
 $ picocom -b 115200 -r -l /dev/ttyUSB0
 ```
 
+To quit *picocom* use CTRL+A CTRL+X.
+
 ## Troubleshooting
 ```bash
 sudo chmod 666 /dev/ttyUSB0
