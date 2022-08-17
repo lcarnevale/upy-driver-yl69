@@ -5,7 +5,6 @@ click==8.0.3
 cryptography==35.0.0
 ecdsa==0.17.0
 esptool==3.2
-pkg_resources==0.0.0
 pycparser==2.20
 pyserial==3.5
 python-dotenv==0.19.1
