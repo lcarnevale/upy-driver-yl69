@@ -1,5 +1,5 @@
-# Resistive Soil Moisture Programming in MicroPython
-This project contains a MicroPython programming example for the resistive soil moisture sensor (YL-69), which measures the volumetric water content in soil, providing in output the voltage value.
+# Resistive Soil Moisture Driver in MicroPython
+This project contains a MicroPython driver for the resistive soil moisture sensor (YL-69 or HL-69), which measures the volumetric water content in soil, providing in output the voltage value.
 
 The picture below shows the proper operation of the sensor. A lower output voltage is the result of sensing a wet soil, whereas a higher output voltage is the result of sensing a dry soil.
 
@@ -25,13 +25,14 @@ $ esptool.py --port /dev/ttyUSB0 erase_flash
 $ esptool.py --chip esp32 --port /dev/ttyUSB0 write_flash -z 0x1000 /PATH/OF/FIRMWARE
 ```
 
-For more information about how flashing micripython on ESP32-based device, see the MicroPython official documentation [here](https://docs.micropython.org/en/latest/esp32/tutorial/intro.html).
+For more information about how flashing MicroPython on ESP32-based device, see the MicroPython official documentation [here](https://docs.micropython.org/en/latest/esp32/tutorial/intro.html).
 
 ## Upload the MicroPython script
-A MicroPython project typically includes at least two files: *boot.py* and *main.py*. Push both of them by using the ]ampy] tool as follow.
+Put all files in the board by using the *ampy* tool as follow.
 ```bash
-$ ampy --port /dev/ttyUSB0 put src/boot.py
-$ ampy --port /dev/ttyUSB0 put src/main.py
+$ ampy --port /dev/ttyUSB0 put examples/boot.py
+$ ampy --port /dev/ttyUSB0 put examples/main.py
+$ ampy --port /dev/ttyUSB0 put drivers
 ```
 
 For more information about how using the *ampy* tool, see the official documentation [here](https://learn.adafruit.com/micropython-basics-load-files-and-run-code/overview).
